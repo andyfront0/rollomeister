@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Rollomeister AR</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no,
+  minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+  <script type="module" src="model-viewer.min.js"></script>
+  <script type="module" src="script.js"></script>
+</head>
+
+<body>
+
+  <section>
+
+    <!----------------------------------------------MODEL VIEWER----------------------------------------------------->
+    <model-viewer id="rollomeister" src="models/products/VS2 Slide Comfort.glb" environment-image="neutral" autoplay
+      camera-controls auto-rotate ar ar-scale="fixed" bounds="tight" ar-modes="webxr scene-viewer quick-look"
+      camera-orbit="-31.88deg 78.75deg auto" camera-target="0m 0m 0m">
+
+      <!--Zusätzliches für AR-->
+      <button slot="ar-button" id="ar-button">AR</button>
+      <div id="ar-prompt"><img src="textures/hand.png"></div>
+      <p id="produktname">VS2 Slide Comfort</p>
+
+      <!--Markierungen und Texte (Hotspots)-->
+      <button slot="hotspot-dim+X-Z" class="dim" data-position="1 0 -1" data-normal="1 0 0"></button>
+      <button slot="hotspot-dim+Y-Z" class="dim show" data-position="0 -1 -1" data-normal="0 1 0"></button>
+      <button slot="hotspot-dim-X-Z" class="dim" data-position="-1 0 -1" data-normal="-1 0 0"></button>
+
+    </model-viewer>
+    <!--------------------------------------------MODEL VIEWER END--------------------------------------------------->
+
+    <!---------------------------------Settings oben links------------------------------------->
+    <nav role="settings">
+      <div id="menuToggle">
+        <input type="checkbox" id="hamburger" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+          <li id="breite_label">Breite</li>
+          <input type="range" class="ranges" id="breite" min="23" max="180" value="50" step="1">
+          <br><br><br>
+          <li id="hoehe_label">Höhe</li>
+          <input type="range" class="ranges" id="hoehe" min="20" max="220" value="50" step="1">
+          <br><br><br>
+          <li id="stoff_label">Stoff</li>
+          <select id="stoffe"></select>
+          <br><br>
+          <li id="stoff_2_label">Stoff 2</li>
+          <select id="stoffe_2"></select>
+          <br><br><br><br><br><br>
+          <label class="checkboxcontainer">Zeige Maße
+            <input type="checkbox" id="zeige-masse" checked="checked">
+            <div class="checkmark"></div>
+          </label>
+          <br><br><br><br><br>
+          <li id="produkt_label">Produkt</li>
+          <nav>
+            <label for="plisseeProdukt"><span class="spanProdukt">Plissee</span></label>
+            <input type="checkbox" id="plisseeProdukt">
+            <ul class="slideProdukt">
+              <button class="slide selected" id="productButton" onclick="" style=""></button>
+            </ul>
+
+            <label for="rolloProdukt"><span class="spanProdukt">Rollo</span></label>
+            <input type="checkbox" id="rolloProdukt">
+            <ul class="slideProdukt">
+            </ul>
+
+            <label for="innenjalousieProdukt"><span class="spanProdukt">Innenjalousie</span></label>
+            <input type="checkbox" id="innenjalousieProdukt">
+            <ul class="slideProdukt">
+            </ul>
+
+            <label for="markiseProdukt"><span class="spanProdukt">Markise</span></label>
+            <input type="checkbox" id="markiseProdukt">
+            <ul class="slideProdukt">
+            </ul>
+
+            <label for="senkrechtmarkiseProdukt"><span class="spanProdukt">Senkrechtmarkise</span></label>
+            <input type="checkbox" id="senkrechtmarkiseProdukt">
+            <ul class="slideProdukt">
+            </ul>
+
+            <label for="lamellenvorhaengeProdukt"><span class="spanProdukt">Lamellenvorhänge</span></label>
+            <input type="checkbox" id="lamellenvorhaengeProdukt">
+            <ul class="slideProdukt">
+            </ul>
+          </nav>
+        </ul>
+      </div>
+    </nav>
+    <!------------------------------Settings oben links ende---------------------------------->
+
+
+    <!-------------------------------------------Scroll down button----------------------------------------------->
+    <a href="#" class="scroll-down" address="true">
+      <div id="goto_1">Virtueller Raum</div>
+    </a>
+    <!-----------------------------------------Scroll down button ende--------------------------------------------->
+  </section>
+
+
+  <section class="room">
+    <!-------------------------------------------Scroll up button----------------------------------------------->
+    <a href="#" class="scroll-up" address="true">
+      <div id="goto_2">Konfigurator</div>
+    </a>
+    <!-----------------------------------------Scroll up button ende--------------------------------------------->
+
+
+    <!----------------------------------------------MODEL VIEWER----------------------------------------------------->
+    <model-viewer id="room_scene" reveal="manual" src="models/rooms/VS2 Slide Comfort.glb" environment-image="neutral"
+      camera-controls camera-target="0.25m 1m 0.25m" camera-orbit="-40deg 87deg 4m" field-of-view="42deg">
+    </model-viewer>
+    <!----------------------------------------------MODEL VIEWER END----------------------------------------------------->
+
+  </section>
+
+</body>
+
+</html>

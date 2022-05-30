@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+/*--------------------------GENERAL---------------------------*/
+
+html, body, button, model-viewer {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    background-color: #f8f8f8;
+    font-family: Raleway, Arial, sans-serif;
+}
+
+
+#produktname {
+    color: rgb(151, 151, 151);
+    text-align: center;
+    width: 100%;
+}
+
+/*------------------------GENERAL ENDE-------------------------*/
+
+/*--------------------------HOTSPOTS---------------------------*/
+
+.dim {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    color: rgba(0, 0, 0, 0.8);
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    max-width: 128px;
+    line-height: 25px;
+    padding: 0.5em 1em;
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    transform: translate3d(-50%, -50%, 0);
+    --min-hotspot-opacity: 0;
+}
+
+.show {
+    --min-hotspot-opacity: 1;
+}
+
+.hide {
+    display: none;
+}
+
+/* This keeps child nodes hidden while the element loads */
+
+:not(:defined)>* {
+    display: none;
+}
+
+/*------------------------HOTSPOTS ENDE-------------------------*/
+
+/*------------------------AR BUTTON------------------------*/
+
+#ar-button {
+    background-image: url(textures/ic_view_in_ar_new_googblue_48dp.png);
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 12px 50%;
+    background-color: #fff;
+    position: absolute;
+    right: 25px;
+    width: 80px;
+    /*transform: translateX(-50%);*/
+    white-space: nowrap;
+    top: 25px;
+    padding: 0px 16px 0px 40px;
+    font-family: Raleway, Arial, sans-serif;
+    font-size: 14px;
+    color: #ff8b02;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 18px;
+    border: 1px solid #DADCE0;
+}
+
+#ar-button:active {
+    background-color: #E8EAED;
+}
+
+#ar-button:focus {
+    outline: none;
+}
+
+#ar-button:focus-visible {
+    outline: 1px solid #ff8b02;
+}
+
+@keyframes circle {
+    from {
+        transform: translateX(-50%) rotate(0deg) translateX(50px) rotate(0deg);
+    }
+
+    to {
+        transform: translateX(-50%) rotate(360deg) translateX(50px) rotate(-360deg);
+    }
+}
+
+@keyframes elongate {
+    from {
+        transform: translateX(100px);
+    }
+
+    to {
+        transform: translateX(-100px);
+    }
+}
+
+model-viewer>#ar-prompt {
+    position: absolute;
+    left: 50%;
+    bottom: 175px;
+    animation: elongate 2s infinite ease-in-out alternate;
+    display: none;
+}
+
+model-viewer[ar-status="session-started"]>#ar-prompt {
+    display: block;
+}
+
+model-viewer>#ar-prompt>img {
+    animation: circle 4s linear infinite;
+}
+
+/*------------------------AR BUTTON ENDE------------------------*/
+
+/*------------------------PRODUKT SLIDER-----------------------*/
+
+.slide {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #fff;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    width: 46%;
+}
+
+.slide.selected {
+    border: 3px solid #ff9100;
+}
+
+.slide:focus {
+    outline: none;
+}
+
+.slide:focus-visible {
+    outline: 2px solid #ff9100;
+}
+
+/*-----------------------PRODUKT SLIDER ENDE----------------------*/
+
+/*----------------------------MENU BUTTON------------------------------*/
+
+#menuToggle {
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#hamburger {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #969696;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2.5px, -1px);
+}
+
+#menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+    position: absolute;
+    width: 200px;
+    color: rgb(151, 151, 151);
+    margin: -50px 0 0 -23px;
+    padding: 35px;
+    padding-top: 65px;
+    border-radius: 20px;
+    padding-bottom: 30px;
+    line-height: 5px;
+    background: #ffffff;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-105%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+
+    -webkit-box-shadow: 0px 0px 29px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 29px 0px rgba(0, 0, 0, 0.2);
+}
+
+#menu li {
+    padding: 10px 0;
+    font-size: 15px;
+}
+
+#breite, #hoehe, #stoffe, #stoffe_2 {
+    width: 100%;
+}
+
+#menuToggle input:checked~ul {
+    transform: none;
+}
+
+/*----------------------------MENU BUTTON END------------------------------*/
+
+/*--------------------------SCROLL DOWN BUTTON----------------------------*/
+
+:after, :before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+.scroll-down {
+    opacity: 1;
+    -webkit-transition: all .5s ease-in 3s;
+    transition: all .5s ease-in 3s;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -16px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    border: 2px solid rgb(151, 151, 151);
+    background-size: 14px auto;
+    border-radius: 50%;
+    z-index: 2;
+    -webkit-animation: bounce-down 2s infinite 2s;
+    animation: bounce-down 2s infinite 2s;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+.scroll-down:before {
+    position: absolute;
+    top: calc(50% - 8px);
+    left: calc(50% - 6px);
+    transform: rotate(-45deg);
+    display: block;
+    width: 12px;
+    height: 12px;
+    content: "";
+    border: 2px solid rgb(151, 151, 151);
+    ;
+    border-width: 0px 0 2px 2px;
+}
+
+@keyframes bounce-down {
+    0%, 100%, 20%, 50%, 80% {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        -webkit-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+
+    60% {
+        -webkit-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+        transform: translateY(-5px);
+    }
+}
+
+/*--------------------------SCROLL DOWN BUTTON ENDE----------------------------*/
+
+/*--------------------------SCROLL UP BUTTON----------------------------*/
+
+.scroll-up {
+    opacity: 1;
+    -webkit-transition: all .5s ease-in 3s;
+    transition: all .5s ease-in 3s;
+}
+
+.scroll-up {
+    position: absolute;
+    bottom: -70px;
+    left: 50%;
+    margin-left: -16px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    border: 2px solid rgb(95, 95, 95);
+    background-size: 14px auto;
+    border-radius: 50%;
+    z-index: 2;
+    -webkit-animation: bounce-up 2s infinite 2s;
+    animation: bounce-up 2s infinite 2s;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+
+.scroll-up:before {
+    position: absolute;
+    top: calc(50% - 4px);
+    left: calc(50% - 6px);
+    transform: rotate(135deg);
+    display: block;
+    width: 12px;
+    height: 12px;
+    content: "";
+    border: 2px solid rgb(95, 95, 95);
+    ;
+    border-width: 0px 0 2px 2px;
+}
+
+@keyframes bounce-up {
+    0%, 100%, 20%, 50%, 80% {
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        -webkit-transform: translateY(+10px);
+        -ms-transform: translateY(+10px);
+        transform: translateY(+10px);
+    }
+
+    60% {
+        -webkit-transform: translateY(+5px);
+        -ms-transform: translateY(+5px);
+        transform: translateY(+5px);
+    }
+}
+
+/*--------------------------SCROLL UP BUTTON ENDE----------------------------*/
+
+/*----------------------GOTO TEXT-------------------------*/
+
+#goto_1 {
+    position: absolute;
+    bottom: 45px;
+    text-align: center;
+    width: 200px;
+    right: -83.5px;
+    color: rgb(151, 151, 151);
+}
+
+#goto_2 {
+    position: absolute;
+    top: 45px;
+    text-align: center;
+    width: 200px;
+    right: -85px;
+    color: rgb(95, 95, 95);
+}
+
+/*----------------------GOTO TEXT ENDE-------------------------*/
+
+
+
+
+/*----------------------PRODUKT MENU--------------------------*/
+#produktMenu {
+    width: 100%;
+}
+
+.spanProdukt {
+    width: 100% !important;
+    box-sizing: border-box;
+    right: 0px;
+    padding: 20px;
+    color: white;
+    cursor: pointer;
+    display: block;
+    background: #ff8b02 !important;
+}
+
+.spanProdukt::after {
+    float: right;
+    right: 10%;
+    content: "+";
+}
+
+.slideProdukt {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    padding-inline-start: 0px;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    clear: both;
+    box-sizing: border-box;
+    width: 100%;
+    height: 0px;
+    text-align: center;
+    transition: height .4s ease;
+}
+
+
+#plisseeProdukt, #rolloProdukt, #innenjalousieProdukt, #markiseProdukt, #senkrechtmarkiseProdukt, #lamellenvorhaengeProdukt {
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+}
+
+#plisseeProdukt:checked+.slideProdukt,
+#rolloProdukt:checked+.slideProdukt,
+#innenjalousieProdukt:checked+.slideProdukt,
+#markiseProdukt:checked+.slideProdukt,
+#senkrechtmarkiseProdukt:checked+.slideProdukt,
+#lamellenvorhaengeProdukt:checked+.slideProdukt {
+    height: 300px;
+}
+
+/*----------------------PRODUKT MENU ENDE--------------------------*/
+
+
+
+/*---------------------RANGES---------------------*/
+.ranges {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: #eaeaea;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.ranges::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ff8b02;
+    cursor: pointer;
+}
+
+.ranges::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #ff8b02;
+    cursor: pointer;
+}
+
+/*---------------------RANGES END---------------------*/
+
+
+
+/*--------------------CUSTOM CHECKBOX---------------------*/
+/* Customize the label (the container) */
+.checkboxcontainer {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkboxcontainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkboxcontainer:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+.checkboxcontainer input:checked~.checkmark {
+    background-color: #ff8b02;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkboxcontainer input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkboxcontainer .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/*--------------------CUSTOM CHECKBOX ENDE---------------------*/
