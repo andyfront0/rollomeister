@@ -78,7 +78,7 @@ var productArray = [
     new Product("8700 Verspannte Jalousie Duoflex", 2, 0, 0, 0, 0, 1, 0, 0),
     new Product("8780 Verspannte Jalousie Duoflex Slide KL zum Kleben ohne Bohren", 2, 0, 0, 0, 0, 1, 0, 0),
     new Product("Standardrollo (optional mit Kassette)", 1, 0, 0, 0, 0, 1, 0, 0),
-    new Product("Standardrollo mit Trägerprofil", 1, 0, 0, 0, 0, 1, 0, 0),
+    new Product("Standardrollo mit Traaegerprofil", 1, 0, 0, 0, 0, 1, 0, 0),
     new Product("89 mm", 5, 0, 0, 0, 0, 1, 0, 0),
     new Product("127 mm", 5, 0, 0, 0, 0, 1, 0, 0),
     new Product("Dachfenster genormt (Velux, Roto, Braas, etc.)", 1, 0, 0, 0, 0, 1, 0, 0),
@@ -120,9 +120,9 @@ var productArray = [
     new Product("Dachfenster", 2, 0, 0, 0, 0, 1, 0, 0),
     new Product("Giebelfenster Jalousien", 2, 0, 0, 0, 0, 1, 0, 0),
     new Product("Giebelfenster Lamellen", 5, 0, 0, 0, 0, 1, 0, 0),
-    new Product("Senkrechte, rechteckige Fenster und Türen", 5, 0, 0, 0, 0, 1, 0, 0),
-    new Product("Wavelines (gegenläufig)", 5, 0, 0, 0, 0, 1, 0, 0),
-    new Product("Wavelines (gleichläufig)", 5, 0, 0, 0, 0, 1, 0, 0)];
+    new Product("Senkrechte, rechteckige Fenster und Tueren", 5, 0, 0, 0, 0, 1, 0, 0),
+    new Product("Wavelines (gegenlaeufig)", 5, 0, 0, 0, 0, 1, 0, 0),
+    new Product("Wavelines (gleichlaeufig)", 5, 0, 0, 0, 0, 1, 0, 0)];
 
 //Load products into menu
 for (var i = 1; i < productArray.length; i++) {
