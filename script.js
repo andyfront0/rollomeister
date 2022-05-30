@@ -78,7 +78,7 @@ var productArray = [
     new Product("8700 Verspannte Jalousie Duoflex", 2, 0, 0, 0, 0, 1, 0, 0),
     new Product("8780 Verspannte Jalousie Duoflex Slide KL zum Kleben ohne Bohren", 2, 0, 0, 0, 0, 1, 0, 0),
     new Product("Standardrollo (optional mit Kassette)", 1, 0, 0, 0, 0, 1, 0, 0),
-    new Product("Standardrollo mit Traaegerprofil", 1, 0, 0, 0, 0, 1, 0, 0),
+    new Product("Standardrollo mit Traegerprofil", 1, 0, 0, 0, 0, 1, 0, 0),
     new Product("89 mm", 5, 0, 0, 0, 0, 1, 0, 0),
     new Product("127 mm", 5, 0, 0, 0, 0, 1, 0, 0),
     new Product("Dachfenster genormt (Velux, Roto, Braas, etc.)", 1, 0, 0, 0, 0, 1, 0, 0),
