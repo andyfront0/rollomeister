@@ -38,8 +38,20 @@ $(document).ready(function () {
 });
 
 //Scrolling buttons (Raumansicht / Konfigurator)
-$(".scroll-down").click(function () { animateScrollDown(); if (menuButton.checked) { menuButton.click(); } });
-$(".scroll-up").click(function () { animateScrollUp(); });
+$(".scroll-down").click(function () { animateScrollDown();});
+$(".scroll-up").click(function () { animateScrollUp();});
+
+//Hide Scroll Buttons wenn das Menü offen ist
+$("#hamburger").click(function () {
+    if ($(".scroll-down").css("visibility") == "hidden") {
+        $(".scroll-down").css("visibility", "visible");
+        $(".scroll-up").css("visibility", "visible");
+    } else {
+        $(".scroll-down").css("visibility", "hidden");
+        $(".scroll-up").css("visibility", "hidden");
+    }
+});
+
 
 //Produkte Contructor
 function Product(name, category, minBreite, maxBreite, minHoehe, maxHoehe, disabledMenu, whichEnvironment, cameraSettings) {
