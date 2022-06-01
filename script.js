@@ -15,6 +15,8 @@ const hoehe_label = document.getElementById("hoehe_label");
 const productButton = document.getElementById("productButton");
 const slidesParent = document.getElementsByClassName("slideProdukt");
 const produktName = document.getElementById("produktname");
+const scrollDownButton = document.getElementsByClassName("scroll-down")[0];
+const scrollUpButton = document.getElementsByClassName("scroll-up")[0];
 var minBreite; var maxBreite; var minHoehe; var maxHoehe;
 var materialSlot; var material2Slot; var materialSlot_room; var material2Slot_room;
 var texture; var texture_2;
@@ -585,11 +587,15 @@ self.addEventListener('touchend', (event) => {
 //Scroll to section functions
 //------------------------------------------------------------------------
 function animateScrollDown() {    
+    
     //Hide Menu (if visible)
     if (menuButton.checked) {
         menuButton.click();
         menuWasOpened = true;
     };
+
+    scrollUpButton.style.visibility = "visible";
+    scrollDownButton.style.visibility = "hidden";
 
     $('html, body').animate({
         scrollTop: $('section.room').offset().top
@@ -610,6 +616,9 @@ function animateScrollUp() {
         menuButton.click();
         menuWasOpened = false;
     };
+
+    scrollUpButton.style.visibility = "hidden";
+    scrollDownButton.style.visibility = "visible";
 
     $('html, body').animate({
         scrollTop: 0

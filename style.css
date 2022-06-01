@@ -339,6 +339,7 @@ section {
 
 .scroll-up {
     position: absolute;
+    visibility: hidden;
     bottom: -70px;
     left: 50%;
     margin-left: -16px;
