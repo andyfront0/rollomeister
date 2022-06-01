@@ -19,6 +19,7 @@ var minBreite; var maxBreite; var minHoehe; var maxHoehe;
 var materialSlot; var material2Slot; var materialSlot_room; var material2Slot_room;
 var texture; var texture_2;
 var material; var material_room; var material_2; var material_room_2;
+var menuWasOpened = false;
 
 // 3 verschiedene Kamera einstellungen für Rollo, Markise, Senkrechtmarkisen
 var cameraTargetArray = ["0.25m 1m 0.25m", "0m 2m -1.5m", "0m 1m -0.75m"];
@@ -40,17 +41,6 @@ $(document).ready(function () {
 //Scrolling buttons (Raumansicht / Konfigurator)
 $(".scroll-down").click(function () { animateScrollDown();});
 $(".scroll-up").click(function () { animateScrollUp();});
-
-//Hide Scroll Buttons wenn das Menü offen ist
-$("#hamburger").click(function () {
-    if ($(".scroll-down").css("visibility") == "hidden") {
-        $(".scroll-down").css("visibility", "visible");
-        $(".scroll-up").css("visibility", "visible");
-    } else {
-        $(".scroll-down").css("visibility", "hidden");
-        $(".scroll-up").css("visibility", "hidden");
-    }
-});
 
 
 //Produkte Contructor
@@ -594,8 +584,13 @@ self.addEventListener('touchend', (event) => {
 
 //Scroll to section functions
 //------------------------------------------------------------------------
-function animateScrollDown() {
-    //document.querySelector("html").style.removeProperty("overflow");
+function animateScrollDown() {    
+    //Hide Menu (if visible)
+    if (menuButton.checked) {
+        menuButton.click();
+        menuWasOpened = true;
+    };
+
     $('html, body').animate({
         scrollTop: $('section.room').offset().top
     },
@@ -610,7 +605,12 @@ function animateScrollDown() {
 
 
 function animateScrollUp() {
-    //document.querySelector("html").style.removeProperty("overflow");
+    //Show Menu (if it was open last time)
+    if (menuWasOpened) {
+        menuButton.click();
+        menuWasOpened = false;
+    };
+
     $('html, body').animate({
         scrollTop: 0
     },
