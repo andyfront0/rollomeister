@@ -190,13 +190,11 @@ function loadEvents() {
         var roomPath = "models/rooms/" + name + ".glb";
         if (doesFileExist(roomPath)) {
             modelViewer_room.src = roomPath;
-            //Activate scrolling up and down buttons
+            //Activate scrolling down button
             $(".scroll-down").css("visibility", "visible");
-            $(".scroll-up").css("visibility", "visible");
         } else {
-            //Deactivate scrolling up and down buttons
+            //Deactivate scrolling down button
             $(".scroll-down").css("visibility", "hidden");
-            $(".scroll-up").css("visibility", "hidden");
         }
 
         //Apply Kameraeinstellungen
