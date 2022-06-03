@@ -228,7 +228,6 @@ model-viewer>#ar-prompt>img {
     padding-top: 65px;
     border-radius: 20px;
     padding-bottom: 30px;
-    line-height: 5px;
     background: #ffffff;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
@@ -247,6 +246,14 @@ model-viewer>#ar-prompt>img {
 
 #breite, #hoehe, #stoffe, #stoffe_2 {
     width: 100%;
+}
+
+#produkt_label {
+    margin-top: 10px;
+}
+
+#hoehe {
+    margin-bottom: 10px;
 }
 
 #menuToggle input:checked~ul {
@@ -425,7 +432,7 @@ section {
     width: 100% !important;
     box-sizing: border-box;
     right: 0px;
-    padding: 20px;
+    padding: 15px;
     color: white;
     cursor: pointer;
     display: block;
@@ -524,6 +531,7 @@ section {
 .checkboxcontainer {
     position: relative;
     padding-left: 30px;
+    margin-top: 15px;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;

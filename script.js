@@ -10,6 +10,7 @@ const hoehe = document.getElementById('hoehe');
 const menuButton = document.getElementById("hamburger");
 const stoffe = document.getElementById("stoffe");
 const stoffe_2 = document.getElementById("stoffe_2");
+const stoffe_2_label = document.getElementById("stoff_2_label");
 const breite_label = document.getElementById("breite_label");
 const hoehe_label = document.getElementById("hoehe_label");
 const productButton = document.getElementById("productButton");
@@ -63,15 +64,21 @@ function Product(name, category, minBreite, maxBreite, minHoehe, maxHoehe, disab
 //Categories: Plissee, Rollo, Innenjalousie, Markise, Senkrechtmarkise, Lamellen
 var productArray = [
     new Product("VS2 Slide Comfort", 0, 23, 180, 20, 220, 0, 0, 0),
-    new Product("Standardrollo (mit Kassette)", 1, 50, 300, 30, 320, 0, 0, 0),
-    new Product("VSZ_rund", 4, 0, 0, 0, 0, 1, 1, 2),
+    new Product("VS1", 0, 0, 0, 0, 0, 1, 0, 0),
     new Product("VS2", 0, 20, 150, 30, 220, 0, 0, 0),
+    new Product("VS3", 0, 0, 0, 0, 0, 1, 0, 0),
+    new Product("VS4", 0, 0, 0, 0, 0, 1, 0, 0),
+    new Product("VS5", 0, 0, 0, 0, 0, 1, 0, 0),
+    new Product("VS6", 0, 0, 0, 0, 0, 1, 0, 0),
+    new Product("VS7", 0, 0, 0, 0, 0, 1, 0, 0),
+    new Product("VS8", 0, 0, 0, 0, 0, 1, 0, 0),
     new Product("Basic", 3, 0, 0, 0, 0, 1, 1, 1),
     new Product("Sonnentraum", 3, 0, 0, 0, 0, 1, 1, 1),
     new Product("Elegance", 3, 0, 0, 0, 0, 1, 1, 1),
     new Product("Gold XXL", 3, 0, 0, 0, 0, 1, 1, 1),
     new Product("Gold", 3, 0, 0, 0, 0, 1, 1, 1),
     new Product("Silver", 3, 0, 0, 0, 0, 1, 1, 1),
+    new Product("VSZ_rund", 4, 0, 0, 0, 0, 1, 1, 2),
     new Product("VS_Cable_eckig", 4, 0, 0, 0, 0, 1, 1, 2),
     new Product("VS_Cable_rund", 4, 0, 0, 0, 0, 1, 1, 2),
     new Product("VS_eckig", 4, 0, 0, 0, 0, 1, 1, 2),
@@ -82,6 +89,7 @@ var productArray = [
     new Product("8500 Glasleistenjalousie Style", 2, 0, 0, 0, 0, 1, 0, 0),
     new Product("8700 Verspannte Jalousie Duoflex", 2, 0, 0, 0, 0, 1, 0, 0),
     new Product("8780 Verspannte Jalousie Duoflex Slide KL zum Kleben ohne Bohren", 2, 0, 0, 0, 0, 1, 0, 0),
+    new Product("Standardrollo (mit Kassette)", 1, 50, 300, 30, 320, 0, 0, 0),
     new Product("Standardrollo (optional mit Kassette)", 1, 0, 0, 0, 0, 1, 0, 0),
     new Product("Standardrollo mit Traegerprofil", 1, 0, 0, 0, 0, 1, 0, 0),
     new Product("89 mm", 5, 0, 0, 0, 0, 1, 0, 0),
@@ -115,13 +123,6 @@ var productArray = [
     new Product("SR 1 S", 0, 0, 0, 0, 0, 1, 0, 0),
     new Product("SR 1", 0, 0, 0, 0, 0, 1, 0, 0),
     new Product("SR 2", 0, 0, 0, 0, 0, 1, 0, 0),
-    new Product("VS1", 0, 0, 0, 0, 0, 1, 0, 0),
-    new Product("VS3", 0, 0, 0, 0, 0, 1, 0, 0),
-    new Product("VS4", 0, 0, 0, 0, 0, 1, 0, 0),
-    new Product("VS5", 0, 0, 0, 0, 0, 1, 0, 0),
-    new Product("VS6", 0, 0, 0, 0, 0, 1, 0, 0),
-    new Product("VS7", 0, 0, 0, 0, 0, 1, 0, 0),
-    new Product("VS8", 0, 0, 0, 0, 0, 1, 0, 0),
     new Product("Dachfenster", 2, 0, 0, 0, 0, 1, 0, 0),
     new Product("Giebelfenster Jalousien", 2, 0, 0, 0, 0, 1, 0, 0),
     new Product("Giebelfenster Lamellen", 5, 0, 0, 0, 0, 1, 0, 0),
@@ -266,13 +267,23 @@ function loadSettings() {
             hoehe.disabled = productArray[i].disabledMenu;
             checkbox.checked = !productArray[i].disabledMenu;
             if (productArray[i].disabledMenu) {
-                checkboxcontainer.style.opacity = "0.5";
-                breite.style.opacity = "0.5";
-                hoehe.style.opacity = "0.5";
+                //checkboxcontainer.style.opacity = "0.5";
+                //hoehe.style.opacity = "0.5";
+                //breite.style.opacity = "0.5";
+                checkboxcontainer.style.display = "none";
+                breite_label.style.display = "none";
+                hoehe_label.style.display = "none";
+                breite.style.display = "none";
+                hoehe.style.display = "none";
             } else {
-                checkboxcontainer.style.opacity = "1";
-                breite.style.opacity = "1";
-                hoehe.style.opacity = "1";
+                //checkboxcontainer.style.opacity = "1";
+                //breite.style.opacity = "1";
+                //hoehe.style.opacity = "1";
+                checkboxcontainer.style.display = "inherit";
+                breite_label.style.display = "inherit";
+                hoehe_label.style.display = "inherit";
+                breite.style.display = "inherit";
+                hoehe.style.display = "inherit";
             }
             
             //Run Checkbox "change" event to show / hide Maße
@@ -332,9 +343,13 @@ function loadMaterial() {
 
     if (material2Slot != -1) {
         material_2 = modelViewer.model.materials[material2Slot];
-        stoffe_2.disabled = false;
+        //stoffe_2.disabled = false;
+        stoffe_2.style.display = "inherit";
+        stoffe_2_label.style.display = "inherit";
     } else {
-        stoffe_2.disabled = true;
+        //stoffe_2.disabled = true;
+        stoffe_2.style.display = "none";
+        stoffe_2_label.style.display = "none";
     }
 
     //On change Stoff
