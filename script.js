@@ -13,6 +13,7 @@ const stoffe_2 = document.getElementById("stoffe_2");
 const breite_label = document.getElementById("breite_label");
 const hoehe_label = document.getElementById("hoehe_label");
 const productButton = document.getElementById("productButton");
+const productName = document.getElementsByClassName("productName");
 const slidesParent = document.getElementsByClassName("slideProdukt");
 const produktName = document.getElementById("produktname");
 const scrollDownButton = document.getElementsByClassName("scroll-down")[0];
@@ -131,13 +132,17 @@ var productArray = [
 //Load products into menu
 for (var i = 1; i < productArray.length; i++) {
     var newItem = productButton.cloneNode(true);
+    //var newName = productName.cloneNode(true);
+    //slidesParent[productArray[i].category].appendChild(newName);
     slidesParent[productArray[i].category].appendChild(newItem);
+    newItem.getElementsByClassName("productName")[0].textContent = productArray[i].name;
     newItem.setAttribute("class", "slide");
     newItem.setAttribute("onclick", "switchSrc(" + i + ",this,'" + productArray[i].name + "')");
     newItem.style = "background-image: url('models/products/" + productArray[i].name + ".jpg');";
 }
 
 //Nur das erste Element, weil das nicht gecloned werden muss
+productName[0].textContent = productArray[0].name;
 productButton.setAttribute("onclick", "switchSrc(" + 0 + ",this,'" + productArray[0].name + "')");
 productButton.style = "background-image: url('models/products/" + productArray[0].name + ".jpg');";
 

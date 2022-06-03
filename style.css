@@ -133,7 +133,6 @@ model-viewer>#ar-prompt>img {
 /*------------------------PRODUKT SLIDER-----------------------*/
 
 .slide {
-    scroll-snap-align: start;
     flex-shrink: 0;
     background-size: contain;
     background-repeat: no-repeat;
@@ -184,7 +183,7 @@ model-viewer>#ar-prompt>img {
     -webkit-touch-callout: none;
 }
 
-#menuToggle span {
+.openclose {
     display: block;
     width: 30px;
     height: 3px;
@@ -197,11 +196,11 @@ model-viewer>#ar-prompt>img {
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
 }
 
-#menuToggle span:first-child {
+.openclose:first-child {
     transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2) {
+.openclose:nth-last-child(2) {
     transform-origin: 0% 100%;
 }
 
@@ -433,6 +432,15 @@ section {
     background: #ff8b02 !important;
 }
 
+.productName {
+    width: 100%;
+    margin-top: 95px;
+    color: rgb(151, 151, 151);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
 .spanProdukt::after {
     float: right;
     right: 10%;
@@ -442,6 +450,7 @@ section {
 .slideProdukt {
     display: flex;
     gap: 5px;
+    row-gap: 40px;
     flex-wrap: wrap;
     overflow-y: auto;
     padding-inline-start: 0px;
