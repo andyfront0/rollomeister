@@ -104,7 +104,6 @@ var productArray = [
     new Product("DF Comfort 30", 0, 0, 0, 0, 0, 1, 0, 0),
     new Product("Doppelrollo Classic", 1, 0, 0, 0, 0, 1, 0, 0),
     new Product("Doppelrollo Premium", 1, 0, 0, 0, 0, 1, 0, 0),
-    new Product("Elektromotor 230 Volt von Rademacher", 1, 0, 0, 0, 0, 1, 0, 0),
     new Product("F Slope 2", 0, 0, 0, 0, 0, 1, 0, 0),
     new Product("F1", 0, 0, 0, 0, 0, 1, 0, 0),
     new Product("F3", 0, 0, 0, 0, 0, 1, 0, 0),
@@ -126,7 +125,6 @@ var productArray = [
     new Product("Dachfenster", 2, 0, 0, 0, 0, 1, 0, 0),
     new Product("Giebelfenster Jalousien", 2, 0, 0, 0, 0, 1, 0, 0),
     new Product("Giebelfenster Lamellen", 5, 0, 0, 0, 0, 1, 0, 0),
-    new Product("Senkrechte, rechteckige Fenster und Tueren", 5, 0, 0, 0, 0, 1, 0, 0),
     new Product("Wavelines (gegenlaeufig)", 5, 0, 0, 0, 0, 1, 0, 0),
     new Product("Wavelines (gleichlaeufig)", 5, 0, 0, 0, 0, 1, 0, 0)];
 
