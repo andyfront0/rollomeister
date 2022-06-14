@@ -1,0 +1,116 @@
+
+.DS_Store
+models/.DS_Store
+models/outside.blend
+models/products/127 mm.blend
+models/products/8000 Standardjalousie (Schnurzug_Wendestab).blend
+models/products/8100 Monokommando (Kette, Kurbel oder Motor).blend
+models/products/8500 Glasleistenjalousie Style.blend
+models/products/8700 Verspannte Jalousie Duoflex.blend
+models/products/8780 Verspannte Jalousie Duoflex Slide KL zum Kleben ohne Bohren.blend
+models/products/89 mm.blend
+models/products/Basic.blend
+models/products/Dachfenster genormt (Velux, Roto, Braas, etc.).blend
+models/products/Dachfenster Komfort.blend
+models/products/Dachfenster.blend
+models/products/DF 10.blend
+models/products/DF 20.blend
+models/products/DF 30.blend
+models/products/DF Comfort 10.blend
+models/products/DF Comfort 20.blend
+models/products/DF Comfort 30.blend
+models/products/Doppelrollo Classic.blend
+models/products/Doppelrollo Premium.blend
+models/products/Elegance.blend
+models/products/F Slope 2.blend
+models/products/F1.blend
+models/products/F3.blend
+models/products/F4.blend
+models/products/FD Slope 3.blend
+models/products/FD Slope 4.blend
+models/products/FE.blend
+models/products/Federzug-Softrollo.blend
+models/products/Giebelfenster (Dreieck).blend
+models/products/Giebelfenster (Trapez).blend
+models/products/Giebelfenster Jalousien.blend
+models/products/Giebelfenster Lamellen.blend
+models/products/Glasleistenrollo.blend
+models/products/Gold XXL.blend
+models/products/Gold.blend
+models/products/Komfortrollo.blend
+models/products/PL 11.blend
+models/products/PLE 12.blend
+models/products/PLK 13.blend
+models/products/Silver.blend
+models/products/Sonnentraum.blend
+models/products/SR 1 S.blend
+models/products/SR 1.blend
+models/products/SR 2.blend
+models/products/Standardrollo (mit Kassette).blend
+models/products/Standardrollo (optional mit Kassette).blend
+models/products/Standardrollo mit Traegerprofil.blend
+models/products/VS1.blend
+models/products/VS2 Slide Comfort.blend
+models/products/VS2.blend
+models/products/VS3.blend
+models/products/VS4.blend
+models/products/VS5.blend
+models/products/VS6.blend
+models/products/VS7.blend
+models/products/VS8.blend
+models/products/VS_Cable_eckig.blend
+models/products/VS_Cable_rund.blend
+models/products/VS_eckig.blend
+models/products/VS_rund.blend
+models/products/VSZ_eckig.blend
+models/products/VSZ_rund.blend
+models/products/Wavelines (gegenlaeufig).blend
+models/products/Wavelines (gleichlaeufig).blend
+models/room.blend
+models/rooms/127 mm.blend
+models/rooms/8000 Standardjalousie (Schnurzug_Wendestab).blend
+models/rooms/8100 Monokommando (Kette, Kurbel oder Motor).blend
+models/rooms/8500 Glasleistenjalousie Style.blend
+models/rooms/8700 Verspannte Jalousie Duoflex.blend
+models/rooms/8780 Verspannte Jalousie Duoflex Slide KL zum Kleben ohne Bohren.blend
+models/rooms/89 mm.blend
+models/rooms/Basic.blend
+models/rooms/Elegance.blend
+models/rooms/Gold XXL.blend
+models/rooms/Gold.blend
+models/rooms/Silver.blend
+models/rooms/Sonnentraum.blend
+models/rooms/Standardrollo (mit Kassette).blend
+models/rooms/VS2 Slide Comfort.blend
+models/rooms/VS2.blend
+models/rooms/VS_Cable_eckig.blend
+models/rooms/VS_Cable_rund.blend
+models/rooms/VS_eckig.blend
+models/rooms/VS_rund.blend
+models/rooms/VSZ_eckig.blend
+models/rooms/VSZ_rund.blend
+textures/black.png
+textures/das_perfekte_Zuhause_rollomeister_de.jpg
+textures/das_perfekte_Zuhause_rollomeister_de_back.jpg
+textures/holz.jpg
+textures/ic_view_in_ar_new_googblue_48dp.png
+textures/Outside Boden/.DS_Store
+textures/Outside Boden/NormalMap.png
+textures/Outside Boden/TexturesCom_WoodPlanksBare0150_1_seamless_S.jpeg
+textures/stoff.jpg
+textures/stoff_alpha.afphoto
+textures/stoff_alpha.png
+textures/textilene bianca riquadrato.jpg
+textures/TexturesCom_Concrete_Closeup_512_albedo.tiff
+textures/TexturesCom_Concrete_Closeup_512_normal.tiff
+textures/TexturesCom_Concrete_Closeup_512_roughness.tiff
+textures/TexturesCom_Concrete_Closeup_512_roughness_orig.tiff
+textures/TexturesCom_FabricPlain0044_1_seamless_normal.png
+textures/TexturesCom_FabricPlain0044_1_seamless_S copy.jpeg
+textures/TexturesCom_FabricPlain0044_1_seamless_S.jpeg
+textures/TexturesCom_Wall_Stucco3_1x1_1K_normal.jpg
+textures/TexturesCom_Wood_ParquetHerringbone_512_albedo.tiff
+textures/TexturesCom_Wood_ParquetHerringbone_512_normal.tiff
+textures/TexturesCom_Wood_ParquetHerringbone_512_roughness.tiff
+textures/TexturesCom_Wood_ParquetHerringbone_512_roughness_orig.tiff
+textures/white.png
