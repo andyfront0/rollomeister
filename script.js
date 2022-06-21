@@ -40,7 +40,20 @@ function doesFileExist(urlToFile) {
 //Make height = width to productButton Element
 $(document).ready(function () {
     $(".slide").css("height", productButton.offsetWidth + 'px');
+
+    //Scroll up when page load
+    window.scrollTo(0,0);
 });
+
+
+//Wenn Window Resize scroll to top / or bottom (je nach aktivem model-viewer)
+window.addEventListener('resize', function(event) {
+    if (scrollUpButton.style.visibility == "visible") {
+        window.scrollTo(0, document.body.scrollHeight);
+    } else {
+        window.scrollTo(0,0);
+    }
+}, true);
 
 //Scrolling buttons (Raumansicht / Konfigurator)
 $(".scroll-down").click(function () { animateScrollDown();});

@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 /*--------------------------GENERAL---------------------------*/
 
+
 html, body, button, model-viewer {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     margin: 0px;
     padding: 0px;
     border: 0px;
@@ -283,9 +284,10 @@ section {
 }
 
 .scroll-down {
-    position: absolute;
+    position: fixed;
     bottom: 30px;
     left: 50%;
+    z-index: 2;
     margin-left: -16px;
     display: block;
     width: 32px;
@@ -344,14 +346,14 @@ section {
 }
 
 .scroll-up {
-    position: absolute;
+    position: fixed;
     visibility: hidden;
-    bottom: -70px;
+    top: 30px;
     left: 50%;
     margin-left: -16px;
     display: block;
     width: 32px;
-    z-index:1;
+    z-index:2;
     height: 32px;
     border: 2px solid rgb(95, 95, 95);
     background-size: 14px auto;
